@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  staging:
+    build: .
+    container_name: flask_staging
+    ports:
+      - "4001:4000"
+    environment:
+      - ENVIRONMENT=staging
+      - GREETING=Hello from Staging!
+      
+  production:
+    build: .
+    container_name: flask_production
+    ports:
+      - "4000:4000"
+    environment:
+      - ENVIRONMENT=production
+      - GREETING=Hello from Production!
+

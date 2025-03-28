@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  blue:
+    build: .
+    container_name: blue_app
+    ports:
+      - "4000:4000"
+    environment:
+      - ENVIRONMENT=blue
+      - GREETING=Welcome to the Blue Environment!
+
+  green:
+    build: .
+    container_name: green_app
+    ports:
+      - "4000:4000"
+    environment:
+      - ENVIRONMENT=green
+      - GREETING=Welcome to the Green Environment!
+

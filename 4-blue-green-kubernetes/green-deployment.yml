@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-green
+  labels:
+    app: flask-app
+    version: green
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask-app
+      version: green
+  template:
+    metadata:
+      labels:
+        app: flask-app
+        version: green
+    spec:
+      containers:
+      - name: flask
+        image: YOUR_DOCKERHUB_USERNAME/my-flask-app:latest
+        ports:
+        - containerPort: 4000
+        env:
+        - name: APP_VERSION
+          value: "green"
+

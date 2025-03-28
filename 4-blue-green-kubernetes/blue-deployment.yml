@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-blue
+  labels:
+    app: flask-app
+    version: blue
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask-app
+      version: blue
+  template:
+    metadata:
+      labels:
+        app: flask-app
+        version: blue
+    spec:
+      containers:
+      - name: flask
+        image: YOUR_DOCKERHUB_USERNAME/my-flask-app:latest
+        ports:
+        - containerPort: 4000
+        env:
+        - name: APP_VERSION
+          value: "blue"
+
