@@ -11,6 +11,6 @@
 - `app.py`
 - `nginx.conf`
 
-2. Start the stable and canary environments with the following command: `docker -f docker-compose.canary.yml up`
+2. Start the stable and canary environments with the following command: `docker compose -f docker-compose.canary.yml up`
 3. Navigate to localhost:8080, refresh the page several times. On average 10% of the times you should see the canary environment
 7. Stop both environments using `CTRL+c`

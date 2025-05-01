@@ -1,6 +1,6 @@
 # Module 5 - Deployment strategies
 
-**Goal**: Learn how to use Docker
+**Goal**: Learn deployment strategies
 
 ## Steps
 

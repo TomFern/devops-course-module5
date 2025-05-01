@@ -4,6 +4,8 @@
 
 ## Steps
 
+Start service: `sudo systemctl start k3s`
+
 1. Ensure that the local kubernetes cluster is running: `kubectl get nodes`
 2. Create or login to an account on <https://hub.docker.com>
 3. Execute `docker login`, you may be prompted to enter your Docker Hub username and password
